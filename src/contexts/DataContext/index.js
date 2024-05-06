@@ -30,12 +30,16 @@ export const DataProvider = ({ children }) => {
     if (data) return;
     getData();
   });
-  
+
+  const last = data?.events?.reduce((evtA, evtB) =>
+    new Date(evtA.date) > new Date(evtB.date) ? evtA : evtB);
+
   return (
     <DataContext.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         data,
+        last,
         error,
       }}
     >
