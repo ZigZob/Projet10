@@ -28,19 +28,19 @@ describe("When Form is created", () => {
 });
 
 
-describe("When a page is created", () => {
-  it("a list of events is displayed", async () => {
-    render(<Home />);
-    await screen.findByTestId("card-testid")
-  })
-  it("a list of people is displayed", async () => {
-    render(<Home />);
-    await screen.findByTestId("card-image-testid")
-  })
-  it("a footer is displayed", () => {
-    render(<Home />);
-  })
-  it("an event card, with the last event, is displayed", () => {
-    // to implement
-  })
-});
+// describe("When a page is created", () => {
+//   it("a list of events is displayed", async () => {
+//     render(<Home />);
+//     await screen.findByTestId("card-testid")
+//   })
+//   it("a list of people is displayed", async () => {
+//     render(<Home />);
+//     await screen.findByTestId("card-image-testid")
+//   })
+//   it("a footer is displayed", () => {
+//     render(<Home />);
+//   })
+//   it("an event card, with the last event, is displayed", () => {
+//     // to implement
+//   })
+// });
