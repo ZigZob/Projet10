@@ -1,8 +1,8 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import Form from "./index";
 
-describe("When Events is created", () => {
-  it("a list of event card is displayed", async () => {
+describe("When Form is created", () => {
+  it("a list of fields is displayed", async () => {
     render(<Form />);
     await screen.findByText("Email");
     await screen.findByText("Nom");
@@ -10,7 +10,7 @@ describe("When Events is created", () => {
     await screen.findByText("Personel / Entreprise");
   });
 
-  describe("and a click is triggered on the submit button", () => {
+  describe("and if a click is triggered on the submit button", () => {
     it("the success action is called", async () => {
       const onSuccess = jest.fn();
       render(<Form onSuccess={onSuccess} />);

@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import Home from "./index";
 
 describe("When Form is created", () => {
-  it("a list of fields card is displayed", async () => {
+  it("a list of labels is displayed", async () => {
     render(<Home />);
     await screen.findByText("Email");
     await screen.findByText("Nom");
@@ -26,21 +26,3 @@ describe("When Form is created", () => {
   });
 
 });
-
-
-// describe("When a page is created", () => {
-//   it("a list of events is displayed", async () => {
-//     render(<Home />);
-//     await screen.findByTestId("card-testid")
-//   })
-//   it("a list of people is displayed", async () => {
-//     render(<Home />);
-//     await screen.findByTestId("card-image-testid")
-//   })
-//   it("a footer is displayed", () => {
-//     render(<Home />);
-//   })
-//   it("an event card, with the last event, is displayed", () => {
-//     // to implement
-//   })
-// });
